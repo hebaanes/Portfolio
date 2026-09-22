@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1067" width="100%" height="100%">
+  <defs>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9cb9cc" />
+      <stop offset="40%" stop-color="#bcccd6" />
+      <stop offset="70%" stop-color="#d6e0e5" />
+      <stop offset="100%" stop-color="#b5c4cb" />
+    </linearGradient>
+    
+    <linearGradient id="mountainBack" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#647d96" />
+      <stop offset="100%" stop-color="#49657a" />
+    </linearGradient>
+
+    <linearGradient id="mountainMid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#415d43" />
+      <stop offset="100%" stop-color="#2d4231" />
+    </linearGradient>
+
+    <linearGradient id="hillsGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#344e33" />
+      <stop offset="100%" stop-color="#1f3220" />
+    </linearGradient>
+
+    <linearGradient id="niqabGrad" x1="0" y1="0" x2="0.3" y2="1">
+      <stop offset="0%" stop-color="#2c2a2b" />
+      <stop offset="35%" stop-color="#181717" />
+      <stop offset="80%" stop-color="#0d0d0d" />
+      <stop offset="100%" stop-color="#050505" />
+    </linearGradient>
+
+    <linearGradient id="clothFold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#333" stop-opacity="0.5"/>
+      <stop offset="50%" stop-color="#111" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <radialGradient id="eyeShine" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#3d2a1d" />
+      <stop offset="60%" stop-color="#1f140c" />
+      <stop offset="100%" stop-color="#0a0503" />
+    </radialGradient>
+
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="800" height="1067" fill="url(#skyGrad)" />
+
+  <!-- Distant Mountains -->
+  <path d="M450,220 Q560,110 680,180 Q740,150 800,200 L800,500 L400,500 Z" fill="url(#mountainBack)" opacity="0.8" />
+  <path d="M0,280 Q160,180 320,240 Q420,210 550,260 L550,550 L0,550 Z" fill="url(#mountainBack)" opacity="0.6" />
+
+  <!-- Mid-distance Forested Hills -->
+  <path d="M0,320 Q120,280 250,330 Q400,310 520,380 Q680,330 800,390 L800,700 L0,700 Z" fill="url(#mountainMid)" />
+  <path d="M-50,420 Q150,370 300,430 Q500,390 650,440 Q750,420 850,470 L850,750 L-50,750 Z" fill="url(#hillsGrad)" />
+
+  <!-- Tiny hillside houses / resort chalets (as seen in the scenic photo) -->
+  <rect x="680" y="420" width="35" height="24" fill="#ede8df" rx="2" opacity="0.8" />
+  <polygon points="675,420 697,400 720,420" fill="#4a3b32" opacity="0.9" />
+  <rect x="725" y="435" width="40" height="26" fill="#f4efe6" rx="2" opacity="0.8" />
+  <polygon points="720,435 745,415 770,435" fill="#3a2f28" opacity="0.9" />
+
+  <!-- Balcony Handrail bar (subtle) -->
+  <line x1="0" y1="710" x2="800" y2="710" stroke="#a0a4a8" stroke-width="8" opacity="0.4" />
+  <line x1="0" y1="725" x2="800" y2="725" stroke="#7a7e82" stroke-width="4" opacity="0.3" />
+
+  <!-- Portrait: Hijab / Head Drape Silhouette -->
+  <!-- Shoulders & Torso -->
+  <path d="M80,1067 C100,820 180,720 280,680 L520,680 C620,720 700,820 720,1067 Z" fill="url(#niqabGrad)" />
+
+  <!-- Main Hood / Hijab Arch -->
+  <path d="M400,440 C280,440 270,540 270,680 C270,820 310,950 400,950 C490,950 530,820 530,680 C530,540 520,440 400,440 Z" fill="#121111" />
+  
+  <!-- Outer Hijab wrap framing face -->
+  <path d="M400,430 C270,430 260,540 260,700 C260,860 300,980 400,990 C500,980 540,860 540,700 C540,540 530,430 400,430 Z" fill="url(#niqabGrad)" stroke="#1a1a1a" stroke-width="4" />
+
+  <!-- Eye slit / forehead / skin opening -->
+  <path d="M330,585 Q400,580 470,585 Q485,615 470,640 Q400,648 330,640 Q315,615 330,585 Z" fill="#cfa888" />
+
+  <!-- Soft skin tone gradient and shading -->
+  <path d="M330,585 Q400,580 470,585 Q485,615 470,640 Q400,648 330,640 Q315,615 330,585 Z" fill="#ba9272" opacity="0.35" />
+
+  <!-- Eyes -->
+  <!-- Left Eye -->
+  <ellipse cx="365" cy="618" rx="22" ry="11" fill="#ffffff" />
+  <circle cx="365" cy="618" r="8" fill="url(#eyeShine)" />
+  <circle cx="363" cy="615" r="2.5" fill="#ffffff" />
+  <path d="M342,618 Q365,607 388,618" stroke="#2b1a13" stroke-width="2.5" fill="none" />
+  <!-- Right Eye -->
+  <ellipse cx="435" cy="618" rx="22" ry="11" fill="#ffffff" />
+  <circle cx="435" cy="618" r="8" fill="url(#eyeShine)" />
+  <circle cx="433" cy="615" r="2.5" fill="#ffffff" />
+  <path d="M412,618 Q435,607 458,618" stroke="#2b1a13" stroke-width="2.5" fill="none" />
+
+  <!-- Eye Brows (subtle) -->
+  <path d="M342,604 Q365,596 385,602" stroke="#2d1c14" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.75" />
+  <path d="M415,602 Q435,596 458,604" stroke="#2d1c14" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.75" />
+
+  <!-- Niqab Veil (lower face covering) -->
+  <path d="M305,625 C320,622 400,628 495,625 C510,680 500,880 400,900 C300,880 290,680 305,625 Z" fill="url(#niqabGrad)" />
+
+  <!-- Upper Niqab Band (over brow) -->
+  <path d="M305,585 C340,580 400,578 495,585 L490,560 C400,555 340,558 310,560 Z" fill="#151515" />
+
+  <!-- Glasses: Distinctive Oversized Round Thin Wire Frames -->
+  <!-- Left Lens Rim -->
+  <circle cx="362" cy="620" r="42" fill="#88b5d6" fill-opacity="0.15" stroke="#d4af37" stroke-width="3.5" />
+  <!-- Right Lens Rim -->
+  <circle cx="438" cy="620" r="42" fill="#88b5d6" fill-opacity="0.15" stroke="#d4af37" stroke-width="3.5" />
+  <!-- Bridge of glasses -->
+  <path d="M404,615 Q400,608 396,615" stroke="#d4af37" stroke-width="3.5" fill="none" />
+  <!-- Glass Temple Arms -->
+  <line x1="320" y1="618" x2="285" y2="612" stroke="#d4af37" stroke-width="3" />
+  <line x1="480" y1="618" x2="515" y2="612" stroke="#d4af37" stroke-width="3" />
+  <!-- Subtle Lens Light Reflection Glare -->
+  <line x1="340" y1="595" x2="380" y2="635" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.4" />
+  <line x1="416" y1="595" x2="456" y2="635" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.4" />
+
+  <!-- Fabric folds and drape lines -->
+  <path d="M290,750 Q350,850 400,900" stroke="#242222" stroke-width="3" fill="none" />
+  <path d="M510,750 Q450,850 400,900" stroke="#242222" stroke-width="3" fill="none" />
+  <path d="M220,850 Q280,950 340,1067" stroke="#1c1b1b" stroke-width="4" fill="none" />
+  <path d="M580,850 Q520,950 460,1067" stroke="#1c1b1b" stroke-width="4" fill="none" />
+
+  <!-- Bottom Academic Citation Watermark Plate -->
+  <rect x="230" y="1010" width="340" height="34" rx="6" fill="#0c0d0e" fill-opacity="0.85" />
+  <text x="400" y="1032" fill="#f2f2f2" font-family="'JetBrains Mono', monospace" font-size="14" text-anchor="middle" letter-spacing="1">
+    HEBA ANIS | NILES &bull; AUC
+  </text>
+</svg>
